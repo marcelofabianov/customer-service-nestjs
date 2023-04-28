@@ -106,10 +106,6 @@ yarn-error.log
 /.env.testing
 docker/production/db/postgres.env
 
-# Docker
-/docker-compose.yml
-/Dockerfile
-
 # Extensions
 *.sh
 *.pfx

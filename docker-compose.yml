@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  backend:
+    container_name: backend
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./backend:/backend
+    networks:
+      - nest_network
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: db
+    restart: always
+    image: postgres:15.1
+    environment:
+      POSTGRES_USER: '${DB_USERNAME:-user}'
+      POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+      POSTGRES_DB: '${DB_DATABASE:-nest_db}'
+    volumes:
+      - 'nest_db:/var/lib/postgresql/data'
+    ports:
+      - "5432:5432"
+    networks:
+      - nest_network
+
+networks:
+  nest_network:
+    driver: bridge
+
+volumes:
+  nest_db:
+    driver: local
