@@ -25,7 +25,7 @@ Este projeto em desenvolvimento vai conter as features.
 1. Deixei pronto ambiente docker caso queira utilizar.
 
 ```bash
-cp docker/local/docker-compose.yml docker-compose.yml && cp docker/local/.zshrc .zshrc
+cp docker/local/docker-compose.yml docker-compose.yml && cp -r docker/local/zsh .
 ```
 
 Para perfumaria deixei configurado o zshrc que voce pode alterar e personalizar conforme deseja pelo .zshrc na raiz.

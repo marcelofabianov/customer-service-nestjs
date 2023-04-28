@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="dallas"
+ZSH_THEME="wedisagree"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 

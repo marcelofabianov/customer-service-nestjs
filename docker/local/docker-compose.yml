@@ -12,7 +12,8 @@ services:
     working_dir: /backend
     volumes:
       - ./backend:/backend
-      - ./.zshrc:/home/node/.zshrc
+      - ./zsh/.zshrc:/home/node/.zshrc
+      - ./zsh/.zsh_history:/home/node/.zsh_history
     networks:
       - nest_network
     depends_on:
@@ -21,7 +22,7 @@ services:
   postgres:
     container_name: db
     restart: always
-    image: postgres:lastest
+    image: postgres:15.1
     environment:
       POSTGRES_USER: 'user'
       POSTGRES_PASSWORD: 'secret'

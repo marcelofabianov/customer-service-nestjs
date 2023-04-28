@@ -103,8 +103,7 @@ yarn-error.log
 
 # Docker
 /docker-compose.yml
-./Dockerfile
-/.zshrc
+/zsh
 
 # Extensions
 *.sh
