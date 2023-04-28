@@ -2,6 +2,12 @@
 
 Repositório para fins de estudo nas tecnologias de NestJS e Prisma.
 
+## Features
+
+Este projeto em desenvolvimento vai conter as features.
+
+[Features](/backend/_docs/features.md)
+
 ## Tecnologias
 
 - NestJS
