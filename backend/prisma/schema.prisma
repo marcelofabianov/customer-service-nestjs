@@ -2,7 +2,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
+datasource nest_db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
@@ -48,7 +48,7 @@ model AccountMembership {
   accountId             String
   userId                String
   roleId                String
-  contractOrganizations Json?     @db.Json
+  contractOrganizations Json?     @nest_db.Json
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
   deletedAt             DateTime?
@@ -142,7 +142,7 @@ model Contract {
   contractStepId          String
   responsabibleUserId     String
   accountId               String
-  limiters                Json?     @db.Json
+  limiters                Json?     @nest_db.Json
   daysToContractStepBlock Int       @default(0)
   createdAt               DateTime  @default(now())
   updatedAt               DateTime  @updatedAt
@@ -172,7 +172,7 @@ model ContractOrganization {
   id             String    @id @default(uuid())
   organizationId String
   contractId     String
-  features       Json?     @db.Json
+  features       Json?     @nest_db.Json
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   deletedAt      DateTime?
@@ -188,7 +188,7 @@ model Audit {
   description  String
   entity       String?
   entityId     String?
-  entityBefore Json?    @db.Json
-  entityAfter  Json?    @db.Json
+  entityBefore Json?    @nest_db.Json
+  entityAfter  Json?    @nest_db.Json
   createdAt    DateTime @default(now())
 }

@@ -9,6 +9,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
+      - '5555:5555'
     working_dir: /backend
     volumes:
       - ./backend:/backend
