@@ -9,8 +9,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
+    working_dir: /backend
     volumes:
       - ./backend:/backend
+      - ./.zshrc:/home/node/.zshrc
     networks:
       - nest_network
     depends_on:
@@ -19,7 +21,7 @@ services:
   postgres:
     container_name: db
     restart: always
-    image: postgres:15.1
+    image: postgres:lastest
     environment:
       POSTGRES_USER: 'user'
       POSTGRES_PASSWORD: 'secret'

@@ -104,6 +104,7 @@ yarn-error.log
 # Docker
 /docker-compose.yml
 ./Dockerfile
+/.zshrc
 
 # Extensions
 *.sh
