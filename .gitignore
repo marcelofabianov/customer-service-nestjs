@@ -100,11 +100,10 @@ yarn-error.log
 
 # Env
 .env
-/.env.example
-/.env.backup
-/.env.production
-/.env.testing
-docker/production/db/postgres.env
+
+# Docker
+/docker-compose.yml
+./Dockerfile
 
 # Extensions
 *.sh

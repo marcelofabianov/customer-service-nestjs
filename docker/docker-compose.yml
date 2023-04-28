@@ -4,7 +4,9 @@ services:
   backend:
     container_name: backend
     restart: always
-    build: .
+    build:
+      context: ./docker/local
+      dockerfile: Dockerfile
     ports:
       - '3000:3000'
     volumes:
@@ -19,9 +21,9 @@ services:
     restart: always
     image: postgres:15.1
     environment:
-      POSTGRES_USER: '${DB_USERNAME:-user}'
-      POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
-      POSTGRES_DB: '${DB_DATABASE:-nest_db}'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'secret'
+      POSTGRES_DB: 'nest_db'
     volumes:
       - 'nest_db:/var/lib/postgresql/data'
     ports:
