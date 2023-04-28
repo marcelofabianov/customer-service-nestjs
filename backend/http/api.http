@@ -2,3 +2,27 @@ GET http://localhost:3000
 
 ###
 GET http://localhost:3000/accounts
+
+###
+GET http://localhost:3000/accounts/e6b3d99e-d192-4fb0-979a-30094f5f109f
+
+###
+POST http://localhost:3000/accounts
+Content-Type: application/json
+
+{
+    "name": "Company XPTO",
+    "registrationDocument": "12345678910121"
+}
+
+###
+PATCH  http://localhost:3000/accounts/e6b3d99e-d192-4fb0-979a-30094f5f109f
+Content-Type: application/json
+
+{
+    "name": "Company XPTO Updated",
+    "registrationDocument": "12345678910122"
+}
+
+###
+DELETE http://localhost:3000/accounts/b61a3fa3-3d4d-43e5-abbd-f8371914f007
